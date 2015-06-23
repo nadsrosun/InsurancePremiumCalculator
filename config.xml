@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hello World</name>
+    <name>Insurance Calculator</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Motor insurance premium calculator prototype app using phonegap
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="mnrosun@gmail.com" href="http://nadsrosun.github.io/">
+        Rosun Nadhiir
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
