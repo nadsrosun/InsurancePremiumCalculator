@@ -20,50 +20,132 @@
     under the License.
 -->
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <!-- Stylesheet -->
-    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <!-- Javascript -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-    <title>My Insurance</title>
-</head>
-<body>
-<!-- Locate Us Page -->
-<div data-role="page" data-theme="a" id="calculator">
-    <!-- left menu -->
-    <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
-        <ul data-role="listview">
-            <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-            <li><a name="about-page" href="about.html">About us</a></li>
-            <li><a name="locate-page" href="locate.html">Locate us</a></li>
-            <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-            <li><a name="Setting-page" href="setting.html">Setting</a></li>
-        </ul>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- Stylesheet -->
+        <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- Javascript -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <title>My Insurance</title>
+    </head>
+    <body>
+        <!-- Calculator 1 Page -->
+        <div data-role="page" data-theme="a" id="calculator-1" class="calculate">
+            <!-- left menu -->
+            <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
+                <ul data-role="listview">
+                    <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page" href="about.html">About us</a></li>
+                    <li><a name="locate-page" href="locate.html">Locate us</a></li>
+                    <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page" href="setting.html">Setting</a></li>
+                </ul>
+            </div>
 
-    <!-- action bar -->
-    <div data-role="header">
-        <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
-        <h1>Esurance</h1>
-        <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
-    </div>
+            <!-- action bar -->
+            <div data-role="header">
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+                <h1>Esurance</h1>
+                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+            </div>
 
-    <!-- main content -->
-    <div data-role="content" role="main" class="main-content">
-        <p>calculator page</p>
+            <!-- main content -->
+            <div data-role="content" role="main" class="main-content">
+                <p>Start by entering your vehicle details before choosing our packages</p>
+                <form action="" method="POST" class="calculate-form">
+                    <!-- Make -->
+                    <label for="calculator-make" class="select">Make:</label>
+                    <select name="calculator-make" id="calculator-make" data-theme="b" data-native-menu="false">
+                        <option value="toyota">Toyota</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="honda">Honda</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                        <option value="renault">Renault</option>
+                    </select>
 
-    </div>
-</div><!-- end main content -->
-</div><!-- end page locate us -->
-</body>
+                    <!-- Model -->
+                    <label for="calculator-model">Model:</label>
+                    <select name="calculator-model" id="calculator-model" data-theme="b" data-native-menu="false">
+                        <option value="belta">Belta</option>
+                        <option value="civic">Civic</option>
+                        <option value="corolla">Corolla</option>
+                    </select>
+
+                    <!-- Engine Capacity -->
+                    <label for="calculator-engine-capacity">Engine Capacity (CC):</label>
+                    <input type="text" name="calculator-engine-capacity" id="calculator-engine-capacity" value="">
+
+                    <!-- Year Registered -->
+                    <label for="calculator-year-registered">Year Registered:</label>
+                    <input type="number" name="calculator-year-registered" id="calculator-year-registered" value="">
+
+                    <div class="next-button">
+                        <a href="calculator.html" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Next</a>
+                    </div>
+                </form>
+            </div><!-- end main content -->
+        </div><!-- end page calculate-1 -->
+
+        <!-- Calculator 2 Page -->
+        <div data-role="page" data-theme="a" id="calculator-2">
+            <!-- left menu -->
+            <div data-role="panel" id="panel2" data-position="left" data-theme="a" data-display="push" class="navbar">
+                <ul data-role="listview">
+                    <li><a name="calculator-page2" href="calculator.html" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page2" href="about.html">About us</a></li>
+                    <li><a name="locate-page2" href="locate.html">Locate us</a></li>
+                    <li><a name="help-page2" href="help.html" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page2" href="setting.html">Setting</a></li>
+                </ul>
+            </div>
+
+            <!-- action bar -->
+            <div data-role="header">
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+                <h1>Esurance</h1>
+                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+            </div>
+
+            <!-- main content -->
+            <div data-role="content" role="main" class="main-content">
+
+            </div><!-- end main content -->
+        </div><!-- end page calculator 2 -->
+
+        <!-- Calculator 3 Page -->
+        <div data-role="page" data-theme="a" id="calculator-3">
+            <!-- left menu -->
+            <div data-role="panel" id="pane3" data-position="left" data-theme="a" data-display="push" class="navbar">
+                <ul data-role="listview">
+                    <li><a name="calculator-page3" href="calculator.html" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page3" href="about.html">About us</a></li>
+                    <li><a name="locate-page3" href="locate.html">Locate us</a></li>
+                    <li><a name="help-page3" href="help.html" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page3" href="setting.html">Setting</a></li>
+                </ul>
+            </div>
+
+            <!-- action bar -->
+            <div data-role="header">
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+                <h1>Esurance</h1>
+                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+            </div>
+
+            <!-- main content -->
+            <div data-role="content" role="main" class="main-content">
+
+
+            </div><!-- end main content -->
+        </div><!-- end page calculate 3 -->
+    </body>
 </html>

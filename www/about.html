@@ -20,50 +20,59 @@
     under the License.
 -->
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <!-- Stylesheet -->
-    <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <!-- Javascript -->
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-    <title>My Insurance</title>
-</head>
-<body>
-<!-- Locate Us Page -->
-<div data-role="page" data-theme="a" id="about">
-    <!-- left menu -->
-    <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
-        <ul data-role="listview">
-            <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-            <li><a name="about-page" href="about.html">About us</a></li>
-            <li><a name="locate-page" href="locate.html">Locate us</a></li>
-            <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-            <li><a name="Setting-page" href="setting.html">Setting</a></li>
-        </ul>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!-- Stylesheet -->
+        <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <!-- Javascript -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <title>My Insurance</title>
+    </head>
+    <body>
+        <!-- About Us Page -->
+        <div data-role="page" data-theme="a" id="about">
+            <!-- left menu -->
+            <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
+                <ul data-role="listview">
+                    <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page" href="about.html">About us</a></li>
+                    <li><a name="locate-page" href="locate.html">Locate us</a></li>
+                    <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page" href="setting.html">Setting</a></li>
+                </ul>
+            </div>
 
-    <!-- action bar -->
-    <div data-role="header">
-        <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
-        <h1>Esurance</h1>
-        <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
-    </div>
+            <!-- action bar -->
+            <div data-role="header">
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+                <h1>Esurance</h1>
+                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+            </div>
 
-    <!-- main content -->
-    <div data-role="content" role="main" class="main-content">
-        <p>about page</p>
+            <!-- main content -->
+            <div data-role="content" role="main" class="main-content">
+                <h2>Our Vision</h2>
+                <p>To become the company of choice, technically sound and financially strong in search of excellence with focus on customer servicing.</p>
 
-    </div>
-</div><!-- end main content -->
-</div><!-- end page locate us -->
-</body>
+                <h2>Our Values</h2>
+                <p>Esurance operates with a set of values and beliefs which is important for its continued growth.  These includes:</p>
+                <ul>
+                    <li>Commitment to quality, ethics, team work, professionalism and integrity.</li>
+                    <li>Encourage innovation, creativity and continuous improvement.</li>
+                    <li>Operating within the framework of the regulated industry.</li>
+                    <li>Recognize and reward excellence by sharing the company’s success with its employees.</li>
+                    <li>Conscious of its role as a responsible corporate citizen.</li>
+                </ul>
+            </div><!-- end main content -->
+        </div><!-- end page About us -->
+    </body>
 </html>
