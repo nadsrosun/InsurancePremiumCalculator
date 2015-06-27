@@ -27,8 +27,9 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <!-- Stylesheet -->
+        <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
         <!-- Javascript -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -37,65 +38,70 @@
         <title>My Insurance</title>
     </head>
     <body>
-        <!-- Page 1 -->
-        <div data-role="page" data-theme="a" id="form1">
-            <div data-role="header" data-theme="a">
-                <h1>CALCULATOR</h1>
+        <!-- Locate Us Page -->
+        <div data-role="page" data-theme="a" id="locate-us">
+            <!-- left menu -->
+            <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push">
+                <ul data-role="listview">
+                    <li>Calculator</li>
+                    <li>About us</li>
+                    <li>Locate us</li>
+                    <li>Help</li>
+                    <li>Setting</li>
+                </ul>
             </div>
-            
-            <div role="main" class="ui-content" style="height: 99.9%!important;">
-                 <form action="" method="POST">
-                   <!-- Make -->
-                    <label for="calculator-make" class+"select">Make:</label>
-                    <select name="calculator-make" id="calculator-make" data-native-menu="false">
-                        <option value="toyota">Toyota</option>
-                        <option value="nissan">Nissan</option>
-                        <option value="honda">Honda</option>
-                        <option value="mitsubishi">Mitsubishi</option>
-                        <option value="renault">Renault</option>
-                    </select>
-                    
-                    <!-- Model -->
-                    <label for="calculator-model">Model:</label>
-                    <select name="calculator-model" id="calculator-model" data-native-menu="false">
-                        <option value="belta">Belta</option>
-                        <option value="civic">Civic</option>
-                        <option value="corolla">Corolla</option>
-                    </select>
-                    
-                    <!-- Engine Capacity -->
-                    <label for="calculator-engine-capacity">Engine Capacity (CC):</label>
-                    <input type="text" name="calculator-engine-capacity" id="calculator-engine-capacity" value="">
 
-                    <!-- Year Registered -->
-                    <label for="calculator-year-registered">Year Registered:</label>
-                    <input type="number" name="calculator-year-registered" id="calculator-year-registered" value="">
-                    
-                    <a href="#page2" class="next-btn" data-icon="arrow-r" data-iconpos="right" data-theme="a">Next</a>
-                    <!--<input value="Next" class="next-btn" data-icon="arrow-r" data-iconpos="right" data-theme="a" type="button">-->
-               </form>
+            <!-- action bar -->
+            <div data-role="header">
+                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
+                <h1>Esurance</h1>
+                <a data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
             </div>
-        </div>
 
-        <!-- Page 2 -->
-        <div data-role="page" data-theme="a" id="form2">
-            <div data-role="header" data-theme="a">
-                <h1>CALCULATOR</h1>
-            </div>
-            
-            <div role="main" class="ui-content" style="height: 99.9%!important;">
-                 <form action="" method="POST">
-                    <fieldset data-role="controlgroup">
-                        <legend>Additional options:</legend>
-                        <input type="checkbox" name="checkbox-1" id="checkbox-1">
-                        <input type="checkbox" name="checkbox-2" id="checkbox-2">
-                        <input type="checkbox" name="checkbox-3" id="checkbox-3">
-                        <input type="checkbox" name="checkbox-4" id="checkbox-4">
-                    </fieldset>
-                    <input value="Calculate" class="next-btn" data-icon="arrow-r" data-iconpos="right" data-theme="a" type="button">
-               </form>
-            </div>
-        </div>
-
+            <!-- main content -->
+            <div data-role="content" role="main" class="main-content">
+                <p>
+                    You can get in touch with the nearest Esurance branch and our agents will be delighted to satisfy your queries.
+                </p>
+                <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross" data-collapsed="false">
+                        <h3>Port Louis</h3>
+                        <p>12 Barracks Street, Port Louis</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: plouis@esurance.com</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross">
+                        <h3>Triolet</h3>
+                        <p>Royal Road - 8th Mile</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: triolet@esurance.com</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross">
+                        <h3>Rose Hill</h3>
+                        <p>9 Sir Virgil Naz Street, Rose Hill</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: rhill@esurance.com</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross">
+                        <h3>Flacq</h3>
+                        <p>Royal Road, Flacq</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: flacq@esurance.com</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross">
+                        <h3>Curepipe</h3>
+                        <p>16 Leclezio Street</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: curepipe@esurance.com</p>
+                    </div>
+                    <div data-role="collapsible" data-collapsed-icon="flat-location" data-expanded-icon="flat-cross">
+                        <h3>Vacoas</h3>
+                        <p>Royal Road, Vacoas</p>
+                        <p>Tel: 214 5858</p>
+                        <p>Email: vacoas@esurance.com</p>
+                    </div>
+                </div>
+            </div><!-- end main content -->
+        </div><!-- end page locate us -->
     </body>
 </html>

@@ -113,3 +113,7 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+/** CUSTOM CSS **/
+/** Locate us Page **/
+#locate-us .main-content p { text-transform: none; }
