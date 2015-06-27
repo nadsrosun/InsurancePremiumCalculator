@@ -121,16 +121,27 @@ h1 {
 
 #locate-us .main-content p, #about .main-content p { text-transform: none; line-height: 1.5;}
 
+h2 { color: #16a085; }
 /** Homepage **/
 .homepage { margin: 20% auto; padding: 10%; text-align: center; text-transform: none; line-height: 1.5; }
     .homepage img { width: 45%; }
     .homepage .start-button{ width: 50%; margin:0 auto; }
 
 /** About **/
-#about h2 { color: #16a085; }
 #about ul li { text-transform: none; line-height: 1.5; }
 
 /** Calculate **/
 .calculate { text-transform: none; }
-    .calculate .calculate-form label{ margin-top: 7%; font-weight: 700; }
+    .calculate .calculate-form label { margin-top: 7%; font-weight: 700; }
     .calculate .calculate-form .next-button { width: 40%; margin: 5% auto; }
+
+    .calculate .calculate-form2 label {padding-top: 5%; }
+    .calculate .calculate-form2 legend { font-weight: 700; margin-bottom: 5%; }
+    .calculate .calculate-form2 .next-button { width: 50%; margin: 8% auto; }
+
+    .calculate .result { text-align: center; }
+        .calculate .result h2{ text-align: left; }
+        .calculate .result .result-container { background: #e3e3e3; padding: 5% 0;  }
+            .calculate .result .result-container p { margin: 0; padding: 0; font-size: 35px; }
+        .calculate .result .result-info { width: 80%; margin: 0 auto;}
+            .calculate .result .result-info p { margin-top: 10%; font-size: 16px; }

@@ -39,7 +39,7 @@
     </head>
     <body>
         <!-- Calculator 1 Page -->
-        <div data-role="page" data-theme="a" id="calculator-1" class="calculate">
+        <div data-role="page" data-theme="a" id="calculator1" class="calculate">
             <!-- left menu -->
             <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
@@ -60,7 +60,7 @@
 
             <!-- main content -->
             <div data-role="content" role="main" class="main-content">
-                <p>Start by entering your vehicle details before choosing our packages</p>
+                <p>Start by entering your vehicle details before choosing package options</p>
                 <form action="" method="POST" class="calculate-form">
                     <!-- Make -->
                     <label for="calculator-make" class="select">Make:</label>
@@ -89,14 +89,14 @@
                     <input type="number" name="calculator-year-registered" id="calculator-year-registered" value="">
 
                     <div class="next-button">
-                        <a href="#calculator-2" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Next</a>
+                        <a href="#calculator2" data-theme="d" class="ui-btn ui-btn-d ui-shadow ui-corner-all">Next</a>
                     </div>
                 </form>
             </div><!-- end main content -->
         </div><!-- end page calculate-1 -->
 
         <!-- Calculator 2 Page -->
-        <div data-role="page" data-theme="a" id="calculator-2">
+        <div data-role="page" data-theme="a" id="calculator2" class="calculate">
             <!-- left menu -->
             <div data-role="panel" id="panel2" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
@@ -117,23 +117,27 @@
 
             <!-- main content -->
             <div data-role="content" role="main" class="main-content">
-                <form action="" method="POST" class="calculate-form">
-                    <fieldset data-role="controlgroup">
+                <form action="" method="POST" class="calculate-form2">
+                    <fieldset data-role="controlgroup" data-theme="c" >
                         <legend>Additional options:</legend>
                         <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                        <label for="checkbox-1">Full coverage of physical damage</label>
                         <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                        <label for="checkbox-2">Passenger cover including driver</label>
                         <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                        <label for="checkbox-3">Cyclone, Tempest, Flood</label>
                         <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                        <label for="checkbox-4">Riots, Strikes, Civil Commotion</label>
                     </fieldset>
                     <div class="next-button">
-                        <a href="#calculator-3" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Calculate</a>
+                        <a href="#calculator3" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Calculate</a>
                     </div>
                 </form>
             </div><!-- end main content -->
         </div><!-- end page calculator 2 -->
 
         <!-- Calculator 3 Page -->
-        <div data-role="page" data-theme="a" id="calculator-3">
+        <div data-role="page" data-theme="a" id="calculator3" class="calculate">
             <!-- left menu -->
             <div data-role="panel" id="pane3" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
@@ -153,9 +157,16 @@
             </div>
 
             <!-- main content -->
-            <div data-role="content" role="main" class="main-content">
-
-
+            <div data-role="content" role="main" class="main-content result">
+                <h2>Your speed quote</h2>
+                <div class="result-container">
+                    <p id="result-amt">Rs 18500 </p>
+                </div>
+                <div class="result-info">
+                    <p>
+                        To get a more personalised and a more exact amount, please contact us on 245 5545.
+                    </p>
+                </div>
             </div><!-- end main content -->
         </div><!-- end page calculate 3 -->
     </body>
