@@ -119,5 +119,10 @@ h1 {
 .navbar a.ui-btn.ui-btn-icon-right.ui-icon-carat-r { background-color: #fff; color: #4e6d8d; }
 .navbar .ui-icon-carat-r:after { background: none; }
 
+/** Homepage **/
+.homepage { margin: 20% auto; padding: 10%; text-align: center; text-transform: none; line-height: 1.5; }
+    .homepage img { width: 45%; }
+    .homepage .start-button{ width: 50%; margin:0 auto; }
+
 /** Locate us Page **/
 #locate-us .main-content p { text-transform: none; }
