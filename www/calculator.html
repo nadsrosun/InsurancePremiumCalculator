@@ -35,6 +35,7 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <title>My Insurance</title>
     </head>
     <body>
@@ -43,11 +44,11 @@
             <!-- left menu -->
             <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
-                    <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-                    <li><a name="about-page" href="about.html">About us</a></li>
-                    <li><a name="locate-page" href="locate.html">Locate us</a></li>
-                    <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-                    <li><a name="Setting-page" href="setting.html">Setting</a></li>
+                    <li><a name="calculator-page" onclick="pageNavigation('calculator')" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page" onclick="pageNavigation('about')">About us</a></li>
+                    <li><a name="locate-page" onclick="pageNavigation('locate')">Locate us</a></li>
+                    <li><a name="help-page" onclick="pageNavigation('help')" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page" onclick="pageNavigation('setting')">Setting</a></li>
                 </ul>
             </div>
 
@@ -55,7 +56,7 @@
             <div data-role="header">
                 <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
                 <h1>Esurance</h1>
-                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+                <a onclick="pageNavigation('setting')" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
             </div>
 
             <!-- main content -->
@@ -64,20 +65,18 @@
                 <form action="" method="POST" class="calculate-form">
                     <!-- Make -->
                     <label for="calculator-make" class="select">Make:</label>
-                    <select name="calculator-make" id="calculator-make" data-theme="b" data-native-menu="false">
+                    <select name="calculator-make" id="calculator-make" data-theme="b" data-native-menu="false"  onchange="populateModel()">
                         <option value="toyota">Toyota</option>
                         <option value="nissan">Nissan</option>
                         <option value="honda">Honda</option>
-                        <option value="mitsubishi">Mitsubishi</option>
-                        <option value="renault">Renault</option>
                     </select>
 
                     <!-- Model -->
                     <label for="calculator-model">Model:</label>
-                    <select name="calculator-model" id="calculator-model" data-theme="b" data-native-menu="false">
-                        <option value="belta">Belta</option>
-                        <option value="civic">Civic</option>
-                        <option value="corolla">Corolla</option>
+                    <select name="calculator-model" id="calculator-model" data-native-menu="false" data-theme="b">
+                        <option value="Belta">Belta</option>
+                        <option value="Corolla">Corolla</option>
+                        <option value="Allion">Allion</option>
                     </select>
 
                     <!-- Engine Capacity -->
@@ -100,11 +99,11 @@
             <!-- left menu -->
             <div data-role="panel" id="panel2" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
-                    <li><a name="calculator-page2" href="calculator.html" data-icon="false">Calculator</a></li>
-                    <li><a name="about-page2" href="about.html">About us</a></li>
-                    <li><a name="locate-page2" href="locate.html">Locate us</a></li>
-                    <li><a name="help-page2" href="help.html" data-icon="false">Help</a></li>
-                    <li><a name="Setting-page2" href="setting.html">Setting</a></li>
+                    <li><a name="calculator-page2" onclick="pageNavigation('calculator')" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page2" onclick="pageNavigation('about')">About us</a></li>
+                    <li><a name="locate-page2" onclick="pageNavigation('locate')">Locate us</a></li>
+                    <li><a name="help-page2" onclick="pageNavigation('help')" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page2" onclick="pageNavigation('setting')">Setting</a></li>
                 </ul>
             </div>
 
@@ -112,7 +111,7 @@
             <div data-role="header">
                 <a data-iconpos="notext" href="#panel2" data-role="button" data-icon="flat-menu"></a>
                 <h1>Esurance</h1>
-                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+                <a onclick="pageNavigation('setting')" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
             </div>
 
             <!-- main content -->
@@ -130,7 +129,7 @@
                         <label for="checkbox-4">Riots, Strikes, Civil Commotion</label>
                     </fieldset>
                     <div class="next-button">
-                        <a href="#calculator3" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Calculate</a>
+                        <a href="#calculator3" onclick="calculate()" data-theme="d" data-icon="arrow-r" data-iconpos="right"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Calculate</a>
                     </div>
                 </form>
             </div><!-- end main content -->
@@ -141,11 +140,11 @@
             <!-- left menu -->
             <div data-role="panel" id="panel3" data-position="left" data-theme="a" data-display="push" class="navbar">
                 <ul data-role="listview">
-                    <li><a name="calculator-page3" href="calculator.html" data-icon="false">Calculator</a></li>
-                    <li><a name="about-page3" href="about.html">About us</a></li>
-                    <li><a name="locate-page3" href="locate.html">Locate us</a></li>
-                    <li><a name="help-page3" href="help.html" data-icon="false">Help</a></li>
-                    <li><a name="Setting-page3" href="setting.html">Setting</a></li>
+                    <li><a name="calculator-page3" onclick="pageNavigation('calculator')" data-icon="false">Calculator</a></li>
+                    <li><a name="about-page3" onclick="pageNavigation('about')">About us</a></li>
+                    <li><a name="locate-page3" onclick="pageNavigation('locate')">Locate us</a></li>
+                    <li><a name="help-page3" onclick="pageNavigation('help')" data-icon="false">Help</a></li>
+                    <li><a name="Setting-page3" onclick="pageNavigation('setting')">Setting</a></li>
                 </ul>
             </div>
 
@@ -153,14 +152,16 @@
             <div data-role="header">
                 <a data-iconpos="notext" href="#panel3" data-role="button" data-icon="flat-menu"></a>
                 <h1>Esurance</h1>
-                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+                <a onclick="pageNavigation('setting')" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
             </div>
 
             <!-- main content -->
             <div data-role="content" role="main" class="main-content result">
                 <h2>Your speed quote</h2>
                 <div class="result-container">
-                    <p id="result-amt">Rs 18500 </p>
+                    <p>
+                        <span id="result-amt">0000</span>
+                    </p>
                 </div>
                 <div class="result-info">
                     <p>

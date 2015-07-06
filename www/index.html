@@ -35,27 +35,15 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <title>My Insurance</title>
     </head>
     <body>
         <!-- Homepage Page -->
         <div data-role="page" data-theme="a" id="homepage">
-            <!-- left menu -->
-            <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
-                <ul data-role="listview">
-                    <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-                    <li><a name="about-page" href="about.html">About us</a></li>
-                    <li><a name="locate-page" href="locate.html">Locate us</a></li>
-                    <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-                    <li><a name="Setting-page" href="setting.html">Setting</a></li>
-                </ul>
-            </div>
-
             <!-- action bar -->
             <div data-role="header">
-                <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
                 <h1>Esurance</h1>
-                <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
             </div>
 
             <!-- main content -->
@@ -64,7 +52,7 @@
                     <img src="img/logo.png" alt="homepage-logo"/>
                     <p>Welcome to Esurance. <br> Simulate your insurance premium now.</p>
                     <div class="start-button">
-                        <a href="calculator.html" data-theme="d" class="ui-btn ui-btn-d ui-shadow ui-corner-all">Start</a>
+                        <a onclick="pageNavigation('calculator')" data-theme="d" class="ui-btn ui-btn-d ui-shadow ui-corner-all">Start</a>
                     </div>
                 </div>
             </div><!-- end main content -->

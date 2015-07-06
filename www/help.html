@@ -35,6 +35,7 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <title>My Insurance</title>
 </head>
 <body>
@@ -43,11 +44,11 @@
     <!-- left menu -->
     <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
         <ul data-role="listview">
-            <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-            <li><a name="about-page" href="about.html">About us</a></li>
-            <li><a name="locate-page" href="locate.html">Locate us</a></li>
-            <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-            <li><a name="Setting-page" href="setting.html">Setting</a></li>
+            <li><a name="calculator-page" onclick="pageNavigation('calculator')" data-icon="false">Calculator</a></li>
+            <li><a name="about-page" onclick="pageNavigation('about')">About us</a></li>
+            <li><a name="locate-page" onclick="pageNavigation('locate')">Locate us</a></li>
+            <li><a name="help-page" onclick="pageNavigation('help')" data-icon="false">Help</a></li>
+            <li><a name="Setting-page" onclick="pageNavigation('setting')">Setting</a></li>
         </ul>
     </div>
 
@@ -55,13 +56,89 @@
     <div data-role="header">
         <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
         <h1>Esurance</h1>
-        <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+        <a onclick="pageNavigation('setting')"  data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
     </div>
 
     <!-- main content -->
     <div data-role="content" role="main" class="main-content">
-        <p>help page</p>
-
+        <p>Get the answers to FAQs on car insurance, then compare quotes to find the right deal for you.</p>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>Why do I need car insurance?</h3>
+                <p>
+                    It's illegal to drive with no car insurance. Without it you can't tax your vehicle,
+                    and it provides cover for you, other motorists and members of the public.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>What sort of policy should I choose?</h3>
+                <p>
+                    The main policy types to consider are third party, third party, fire and theft and comprehensive.
+                    Consider the pros and cons of each and choose the appropriate cover for your needs.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>How can I keep my premiums low?</h3>
+                <p>
+                    There are multiple ways to keep your premiums down, such as limiting mileage and increasing voluntary excess.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>Is it cheaper to pay annually or monthly?</h3>
+                <p>
+                    It's almost always cheaper to pay up front annually.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>What's an excess?</h3>
+                <p>
+                    Most policies include an excess, which is the amount to be paid by the policy holder in the event of a claim.
+                    There's both a compulsory excess, imposed by the insurer, and a voluntary excess.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>What's a no claims bonus?</h3>
+                <p>
+                    A no claims bonus (NCB) is awarded for each year you hold private car insurance in your own name without
+                    making a claim.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>Should I protect my no claims bonus?</h3>
+                <p>
+                    If you pay to protect your no claims bonus you're only protecting the bonus, not the premium itself which will rise if you've made a claim.
+                    Only you can decide if this is worthwhile for you.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>Am I covered to drive other vehicles?</h3>
+                <p>
+                    This completely depends on your policy, so it's best to check with your insurer. Just because you're fully comprehensive doesn't mean
+                    that you'll be covered to drive other cars.
+                </p>
+            </div>
+        </div>
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible" data-collapsed-icon="flat-checkround" data-expanded-icon="flat-cross">
+                <h3>How do I work out my car's value?</h3>
+                <p>
+                    Always estimate your car's value honestly, but an approximate estimation is usually fine as an insurer will typically base a pay-out on market value.
+                </p>
+            </div>
         </div>
     </div><!-- end main content -->
 </div><!-- end page locate us -->

@@ -119,7 +119,7 @@ h1 {
 .navbar a.ui-btn.ui-btn-icon-right.ui-icon-carat-r { background-color: #fff; color: #4e6d8d; }
 .navbar .ui-icon-carat-r:after { background: none; }
 
-#locate-us .main-content p, #about .main-content p { text-transform: none; line-height: 1.5;}
+#locate-us .main-content p, #about .main-content p, #setting p{ text-transform: none; line-height: 1.5;}
 
 h2 { color: #16a085; }
 /** Homepage **/
@@ -142,6 +142,12 @@ h2 { color: #16a085; }
     .calculate .result { text-align: center; }
         .calculate .result h2{ text-align: left; }
         .calculate .result .result-container { background: #e3e3e3; padding: 5% 0;  }
-            .calculate .result .result-container p { margin: 0; padding: 0; font-size: 35px; }
+            .calculate .result .result-container p { margin: 0; padding: 0; font-size: 32px; }
         .calculate .result .result-info { width: 80%; margin: 0 auto;}
             .calculate .result .result-info p { margin-top: 10%; font-size: 16px; }
+
+/** Help **/
+#help {text-transform: none }
+    #help p { font-size: 12px; }
+
+

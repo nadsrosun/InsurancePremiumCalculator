@@ -35,6 +35,7 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <title>My Insurance</title>
 </head>
 <body>
@@ -43,11 +44,11 @@
     <!-- left menu -->
     <div data-role="panel" id="panel" data-position="left" data-theme="a" data-display="push" class="navbar">
         <ul data-role="listview">
-            <li><a name="calculator-page" href="calculator.html" data-icon="false">Calculator</a></li>
-            <li><a name="about-page" href="about.html">About us</a></li>
-            <li><a name="locate-page" href="locate.html">Locate us</a></li>
-            <li><a name="help-page" href="help.html" data-icon="false">Help</a></li>
-            <li><a name="Setting-page" href="setting.html">Setting</a></li>
+            <li><a name="calculator-page" onclick="pageNavigation('calculator')" data-icon="false">Calculator</a></li>
+            <li><a name="about-page" onclick="pageNavigation('about')">About us</a></li>
+            <li><a name="locate-page" onclick="pageNavigation('locate')">Locate us</a></li>
+            <li><a name="help-page" onclick="pageNavigation('help')" data-icon="false">Help</a></li>
+            <li><a name="Setting-page" onclick="pageNavigation('setting')">Setting</a></li>
         </ul>
     </div>
 
@@ -55,14 +56,22 @@
     <div data-role="header">
         <a data-iconpos="notext" href="#panel" data-role="button" data-icon="flat-menu"></a>
         <h1>Esurance</h1>
-        <a href="setting.html" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
+        <a onclick="pageNavigation('setting')" data-iconpos="notext" data-role="button" data-icon="gear" title="Setting">Setting</a>
     </div>
 
     <!-- main content -->
     <div data-role="content" role="main" class="main-content">
-        <p>setting page</p>
+        <p>
+            This application is only a prototype of an ios app developped for the purpose of an assignment
+            for the course of PGD in web & mobile application development.
+            This prototype can be used as a starting point to further enhance/develop an app for a real insurance
+            company
+        </p>
+        <button name="buttonClick"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Contact Developer</button>
+        <button name="buttonClick"  class="ui-btn ui-btn-d ui-shadow ui-corner-all">Rate me!</button>
     </div>
 </div><!-- end main content -->
 </div><!-- end page locate us -->
+
 </body>
 </html>
